@@ -69,5 +69,5 @@ Sample files are provided in the [`/samples`](./samples/) directory.
 
 ## The executuion must be like this: 
 
-<img width="2510" height="1223" alt="Screenshot 2026-05-08 111331" src="https://github.com/user-attachments/assets/c09b5062-a8b0-47e8-af4f-14ff1d1991bb" />
+<img width="2510" height="1223" alt="Screenshot 2026-05-08 111331" src="https://github.com/user-attachments/assets/adfe3ec0-2111-4757-883e-36a15dba18e9" />
 
