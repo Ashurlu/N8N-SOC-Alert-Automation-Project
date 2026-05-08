@@ -1,0 +1,19 @@
+
+---
+ 
+## 🔁 Workflow Architecture
+ 
+```
+Webhook → [VirusTotal (IP Reputation)]
+        → [LLM (Email Analysis)]
+              ↓
+           Merge
+              ↓
+             If (malicious score > 3 OR confidence > 7)
+           /      \
+        true      false
+          ↓          ↓
+   Create Ticket   Wait (human review)
+```
+ 
+---
