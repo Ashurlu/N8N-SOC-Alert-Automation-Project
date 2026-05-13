@@ -88,3 +88,21 @@ The True Branch is active with 2 items passing through:
 }
 ```
 
+## Decision Flow Summary
+
+```json
+VirusTotal malicious = 8  →  8 > 3  ✅ TRUE
+                                        OR
+LLM confidence_score = 9  →  9 > 7  ✅ TRUE
+                                        ↓
+                              TRUE BRANCH TRIGGERED
+                                        ↓
+                           → Create Incident Ticket
+```
+## Key Takeaways
+
+The If node acts as the automated triage engine — no human needed for clear-cut cases
+Using OR logic means the workflow catches threats even if only one source flags it — reducing false negatives
+Both signals independently confirmed this as malicious, giving maximum confidence in the automated response
+The False branch handles edge cases — borderline emails are not silently dropped but held for analyst review via the Wait node
+In production, thresholds (3 and 7) can be tuned based on the organization's risk tolerance and false positive rate
