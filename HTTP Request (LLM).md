@@ -25,3 +25,21 @@ This screenshot shows the LLM node inside the n8n workflow editor. It sends the 
  - Method -> POST -> Sends data to the LLM for processing
  - URL -> http://3.82.6.129:9001/analyzeMock -> LLM analysis endpoint on port 9001
  - Authentication -> None -> Mock API — in production an API key is required
+ - Send Query Parameters -> OFF -> No URL query params needed
+ - Send Headers -> OFF -> No custom headers needed
+ - Send Body -> ON -> Email body is sent as JSON payload
+ - Body Content Type -> JSON -> Data formatted as JSON
+ - Specify Body -> Using JSON -> Manual JSON expression used
+
+## LLM Output Format
+The LLM analysis node returns structured JSON:
+```json
+{
+  "summary": "...",
+  "social_engineering_techniques": ["authority impersonation", "urgency/fear", "credential harvesting link"],
+  "iocs_extracted": ["http://suspicious-url.xyz/verify", "203.0.113.45"],
+  "confidence_score": 9,
+  "verdict": "phishing"
+}
+```
+
