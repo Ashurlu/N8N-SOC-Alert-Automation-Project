@@ -34,3 +34,57 @@ is greater than
 ```
 → Checks if VirusTotal malicious count > 3  
 → Current value: 8 ✅ TRUE  
+## Operator between conditions:
+
+```json
+OR
+```
+→ Only one condition needs to be true to route to the True branch  
+  
+Condition 2:
+```json
+{{ $json.confidence_score }}
+is greater than
+7
+```
+→ Checks if LLM confidence score > 7  
+→ Current value: 9 ✅ TRUE  
+ - Convert types where required -> OFF -> Values compared as-is
+ - Ignore Case -> OFF -> Case-sensitive string comparison
+   Both conditions are TRUE in this execution — the email passes the threshold on both checks simultaneously, making this a high-confidence automated decision.
+
+## Right Panel — OUTPUT
+The True Branch is active with 2 items passing through:
+
+```json
+{
+  "data": {
+    "id": "203.0.113.45",
+    "type": "ip-address",
+    "attributes": {
+      "last_analysis_stats": {
+        "malicious": 8,
+        "suspicious": 3,
+        "harmless": 50,
+        "undetected": 23
+      },
+      "reputation": -28,
+      "country": "CN",
+      "tags": ["phishing", "spam"]
+    }
+  },
+  "summary": "This email impersonates the IT department...",
+  "social_engineering_techniques": [
+    "authority impersonation",
+    "urgency/fear",
+    "credential harvesting link"
+  ],
+  "iocs_extracted": [
+    "http://secure-login.totallylegit.xyz/verify",
+    "203.0.113.45"
+  ],
+  "confidence_score": 9,
+  "verdict": "phishing"
+}
+```
+
