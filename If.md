@@ -11,7 +11,7 @@ Condition (True = Malicious):
 True branch  → Create incident ticket (HTTP Request)
 False branch → Route to human review (Wait node)
 
-<img width="1600" height="798" alt="WhatsApp Image 2026-05-08 at 20 36 14 (1)" src="https://github.com/user-attachments/assets/576accb4-4033-4fbb-b20c-df7081e044bd" />
+<img width="2514" height="1254" alt="Screenshot 2026-05-08 114717" src="https://github.com/user-attachments/assets/ad04f386-f87e-4f96-b028-9dbbdf24b010" />
 
 ## 🔀 If Condition Logic
 The workflow triggers the True (malicious) branch when:
