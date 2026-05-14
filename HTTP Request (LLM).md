@@ -16,7 +16,7 @@ Output:
 In production: replace mock URL with 
 OpenAI, Anthropic, or a local LLM endpoint.
 
-<img width="1600" height="802" alt="WhatsApp Image 2026-05-08 at 20 36 14" src="https://github.com/user-attachments/assets/6262521e-cef6-4a12-823d-1f208ed22e41" />
+<img width="2509" height="1259" alt="Screenshot 2026-05-08 113312" src="https://github.com/user-attachments/assets/44c7e907-6a6b-46c1-abda-49ec97fe6007" />
 
 ## Screenshot Description
 n8n — LLM Node (HTTP Request1): AI-Powered Email Analysis
